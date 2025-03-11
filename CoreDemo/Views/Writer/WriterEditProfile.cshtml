@@ -1,0 +1,41 @@
+﻿@model UserUpdateViewModel
+@{
+    ViewData["Title"] = "WriterEditProfile";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Yazar Profil Bilgilerini Düzenleme</h4>
+                <br />
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Yazar Ad Soyad</label>
+                        <input type="text" class="form-control" id="exampleInputName1" asp-for="@Model.namesurname"  placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Mail Adresi </label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" asp-for="@Model.mail"  placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Kullanıcı Adı </label>
+                        <input type="text" class="form-control" id="exampleInputusernamel2" asp-for="@Model.username" placeholder="Email">
+                    </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Yeni Şifreniz </label>
+                    <input type="text" class="form-control" id="exampleInputusernamel2" asp-for="@Model.password" placeholder="Email">
+                </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Resim Yolu </label>
+                        <input type="text" class="form-control" id="exampleInputusernamel2" asp-for="@Model.imageurl" placeholder="Email">
+                    </div>
+                 
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
+                    <button asp-action="/Dashboard/Index" class="btn btn-light">İptal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
